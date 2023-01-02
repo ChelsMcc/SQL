@@ -1,0 +1,24 @@
+--Create an inventory database for a refill store
+
+CREATE TABLE Inventory (id INTEGER PRIMARY KEY , item TEXT , price INTEGER , quantity INTEGER , company TEXT );
+
+INSERT INTO Inventory VALUES (1, "candles", 4, 16, "Quinn");
+INSERT INTO Inventory VALUES (2, "soap", 4, 20, "EcoWash");
+INSERT INTO Inventory VALUES (3, "shampoo", 5, 13, "EcoWash");
+INSERT INTO Inventory VALUES (4, "condtionar", 5, 8, "Ecowash");
+INSERT INTO Inventory VALUES (5, "lotion", 3, 17, "EcoWash");
+INSERT INTO Inventory VALUES (6, "scrub", 2, 6, "BathBliss");
+INSERT INTO Inventory VALUES (7, "loofah", 1, 8, "BathBliss");
+INSERT INTO Inventory VALUES (8, "toothbrush", 2, 15, "EcoMouth");
+INSERT INTO Inventory VALUES (9, "toothpaste", 3, 13, "EcoMouth");
+INSERT INTO Inventory VALUES (10, "waterbottle", 10, 14, "AquaBlue");
+INSERT INTO Inventory VALUES (11, "wax wrap", 5, 6, "Bumble Wrap");
+INSERT INTO Inventory VALUES (12, "dish soap", 4, 7, "Bubbles");
+INSERT INTO Inventory VALUES (13, "dish brush", 3, 10, "Bubbles");
+INSERT INTO Inventory VALUES (14, "dish detergent", 7, 9, "Bubbles");
+INSERT INTO Inventory VALUES (15, "laundry sheets", 5, 12, "Bubbles");
+
+--display each item with the quantity in the inventory 
+SELECT item, SUM(quantity) FROM Inventory GROUP BY item;
+
+--
