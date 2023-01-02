@@ -1,2 +1,2 @@
 # SQL
-Welcome to my SQL portfolio! This code repository contains examples of SQL I've written. Feel free to take a look and reach out if you have any questions.
+Welcome to my SQL repository! This portfolio contains all the SQL projects I have worked on. Please reach out if you would like to discuss any of my work.
