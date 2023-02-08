@@ -1,0 +1,33 @@
+CREATE TABLE actors(
+id INTEGER PRIMARY KEY,
+name TEXT,
+age INTEGER,
+gender TEXT,
+series INTEGER);
+INSERT INTO actors VALUES(1,'Chris Evans', 41, 'male', 1);
+INSERT INTO actors VALUES(2,'Adam Driver', 39, 'male', 3);
+INSERT INTO actors VALUES(3,'Gal Gadot', 37, 'female', 2);
+INSERT INTO actors VALUES(4,'Margot Robbie', 32, 'female', 2);
+INSERT INTO actors VALUES(5,'Henry Cavill', 39, 'male', 2);
+INSERT INTO actors VALUES(6,'Chris Hemsworth', 39, 'male', 1);
+INSERT INTO actors VALUES(7,'Robert Downey Jr', 57, 'male', 1);
+INSERT INTO actors VALUES(8,'Harrison Ford', 80, 'male', 3);
+INSERT INTO actors VALUES(9,'Scarlett Johansson', 38, 'female', 1);
+INSERT INTO actors VALUES(11,'Dwayne Johnson', 50, 'male', 2);
+INSERT INTO actors VALUES(12,'Daniel Radcliffe', 33, 'male', 4);
+INSERT INTO actors VALUES(13,'John Cena', 45, 'male', 2);
+INSERT INTO actors VALUES(14,'Mark Hamill', 71, 'male', 3);
+INSERT INTO actors VALUES(15,'Ryan Reynolds', 46, 'male', 1);
+
+CREATE TABLE franchise (
+id INTEGER,
+name TEXT);
+INSERT INTO franchise VALUES (1, 'Marvel');
+INSERT INTO franchise VALUES (2, 'DC');
+INSERT INTO franchise VALUES (3, 'Star Wars');
+INSERT INTO franchise VALUES (4, 'Harry Potter');
+
+SELECT actors.name, actors.age, actors.gender, franchise.name
+FROM actors
+LEFT JOIN franchise
+WHERE actors.series = franchise.id;
